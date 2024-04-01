@@ -1,5 +1,3 @@
-
-
 // function fibonaci(num) {
 //     const result = [0, 1];
 
@@ -132,43 +130,80 @@
 
 
 
-function letEmail(name , surname) {
-    let email = name + '.' + surname + '@gmail.com'
+// function letEmail(name , surname) {
+//     let email = name + '.' + surname + '@gmail.com'
     
-    return email
-  
-}
-
-console.log(
-
-    letEmail(prompt('Name'),prompt('Surname'))
-
-    );
+//     return email 
+// }
+// console.log(
+//     letEmail(prompt('Name'),prompt('Surname'))
+//     );
 
 
 
 
 
 
-function generateRandomId(length) {
-    let result = '';
-    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let charactersLength = characters.length;
-    for (let i = 0; i < length; i++ ) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+// function generateRandomId(length) {
+//     let result = '';
+//     let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+//     let charactersLength = characters.length;
+//     for (let i = 0; i < length; i++ ) {
+//         result += characters.charAt(Math.floor(Math.random() * charactersLength));
+//     }
+//     return result;
+// }
+
+
+// let id = generateRandomId(10);
+// console.log(id); 
+
+
+
+
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+function FizzBuzz(fizz, buzz, fizzbuzz) {
+    for (let item of arr) {
+        if (item % fizz === 0) {
+            arr[arr.indexOf(item)] = 'Fizz';
+
+        } else if (item % buzz === 0) {
+            arr[arr.indexOf(item)] = 'Buzz';
+
+        } else if (item % fizzbuzz === 0) {
+            arr[arr.indexOf(item)] = 'FizzBuzz';
+        }
     }
-    return result;
 }
 
-
-let id = generateRandomId(10);
-console.log(id); 
-
+FizzBuzz(3, 5, 15);
+console.log(arr);
 
 
 
 
 
 
+
+let array = [[1],[[[[2]]]] , [3, [4, 5], 6,], 7, 8, 9, [10, [11, [12, 13,]], 14,], 15];
+
+function massiv() {
+
+  let new_array = [];
+
+for (let item of array) {
+    if (Array.isArray(item)) {
+        new_array.push(...item.flat(Infinity));
+    } else {
+        new_array.push(item);
+    }
+}
+
+console.log(new_array); 
+}
+
+ massiv();
 
 
